@@ -38,3 +38,10 @@ const squads = [
         fouls: 0
     }
 ];
+
+// Funzione numeri random
+for (let i = 0; i < squads.length; i++) {
+    squads[i].points = (Math.floor((Math.random() * 70) + 1));
+    squads[i].fouls = (Math.floor((Math.random() * 90) + 1));
+}
+console.log(squads)
