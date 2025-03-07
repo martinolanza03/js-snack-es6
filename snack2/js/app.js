@@ -40,8 +40,22 @@ const squads = [
 ];
 
 // Funzione numeri random
+
 for (let i = 0; i < squads.length; i++) {
-    squads[i].points = (Math.floor((Math.random() * 70) + 1));
-    squads[i].fouls = (Math.floor((Math.random() * 90) + 1));
+    squads[i].points = Math.floor((Math.random() * 70) + 1);
+    squads[i].fouls = Math.floor((Math.random() * 90) + 1);
 }
-console.log(squads)
+console.log(squads);
+
+// Array dei falli
+
+const squadFouls = [];
+for (let i = 0; i < squads.length; i++) {
+    const squadFoulsObject = {
+        name: squads[i].name,
+        fouls: squads[i].fouls
+    };
+    squadFouls.push(squadFoulsObject);
+}
+
+console.log(squadFouls);
